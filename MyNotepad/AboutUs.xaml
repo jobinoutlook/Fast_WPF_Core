@@ -1,0 +1,14 @@
+﻿<Window x:Class="MyNotepad.AboutUs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyNotepad"
+        mc:Ignorable="d"
+        Title="About Us" Height="285" Width="445" Background="#FFEBEBEB" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/help_icon.png">
+    <Grid>
+        <Label x:Name="label" Content="Notepad App" HorizontalAlignment="Left" Margin="255,69,0,0" VerticalAlignment="Top" Width="165" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" Margin="285,135,0,0" VerticalAlignment="Top" Width="90" Height="39" Click="button_Click"/>
+        <Image x:Name="note_image" HorizontalAlignment="Left" Height="65" Margin="55,54,0,0" VerticalAlignment="Top" Width="75" Source="/notepad_icon.png"/>
+    </Grid>
+</Window>

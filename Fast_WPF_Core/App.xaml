@@ -1,0 +1,17 @@
+﻿<Application x:Class="Fast_WPF_Core.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Fast_WPF_Core"
+             StartupUri="ResWindow.xaml"
+    xmlns:System="clr-namespace:System;assembly=System.Runtime">
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="App_ButtonBackground" Color="#FFDBF2B6"/>
+        <FontWeight x:Key="App_ButtonFontWeight">Bold</FontWeight>
+        <System:Double x:Key="App_ButtonWidth">122</System:Double>
+        <System:Double x:Key="App_ButtonHeight">45</System:Double>
+        <System:Double x:Key="App_ButtonFontSize">12</System:Double>
+        <Cursor x:Key="App_ButtonCursor">Hand</Cursor>
+        <System:Double x:Key="My_ButtonFontSize">12</System:Double>
+    </Application.Resources>
+</Application>

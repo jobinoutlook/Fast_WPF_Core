@@ -1,0 +1,34 @@
+﻿<Window x:Class="PhoneBook.GroupAlign"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneBook"
+        mc:Ignorable="d"
+        Title="GroupAlign" Height="565" Width="641">
+    <Grid>
+        <TextBox x:Name="textBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" FontSize="14" FontWeight="Bold" TabIndex="0" Margin="134,55,0,0" HorizontalAlignment="Left"/>
+        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Margin="93,54,0,0" Height="27"/>
+        <Label x:Name="label_Copy" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Margin="48,95,0,0" Height="27"/>
+        <TextBox x:Name="textBox_Copy" Margin="134,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" FontSize="14" FontWeight="Bold" TabIndex="1" HorizontalAlignment="Left"/>
+        <Label x:Name="label_Copy1" Content="Last Name" HorizontalAlignment="Left" Margin="49,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Height="27"/>
+        <TextBox x:Name="textBox_Copy1" Margin="134,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" FontSize="14" FontWeight="Bold" TabIndex="2" HorizontalAlignment="Left"/>
+        <Label x:Name="label_Copy2" Content="Cell Number" HorizontalAlignment="Left" Margin="38,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Height="27"/>
+        <TextBox x:Name="textBox_Copy2" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" Margin="134,220,0,0" FontSize="14" FontWeight="Bold" TabIndex="4" HorizontalAlignment="Left"/>
+        <Label x:Name="label_Copy3" Content="Land Line" HorizontalAlignment="Left" Margin="54,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Height="26"/>
+        <TextBox x:Name="textBox_Copy3" Margin="134,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="211" Height="22" FontSize="14" FontWeight="Bold" TabIndex="5" HorizontalAlignment="Left"/>
+        <Label x:Name="label_Copy4" Content="Email" HorizontalAlignment="Left" Margin="77,300,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Height="26"/>
+        <TextBox x:Name="textBox_Copy4" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" Margin="134,300,0,0" FontSize="14" FontWeight="Bold" TabIndex="6" HorizontalAlignment="Left"/>
+        <Label x:Name="label_Copy5" Content="Comment" HorizontalAlignment="Left" Margin="53,371,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Height="27"/>
+        <TextBox x:Name="textBox_Copy5" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" Margin="134,371,0,0" FontSize="14" FontWeight="Bold" TabIndex="7" HorizontalAlignment="Left"/>
+        <ComboBox x:Name="comboBox" Margin="134,179,0,0" VerticalAlignment="Top" Width="211" SelectedIndex="0" Cursor="Hand" FontWeight="Bold" FontSize="14" TabIndex="3" HorizontalAlignment="Left">
+            <ComboBoxItem Cursor="Hand" Content="Male"/>
+            <ComboBoxItem Cursor="Hand" Content="Female"/>
+        </ComboBox>
+        <Label x:Name="label_Copy6" Content="Gender" HorizontalAlignment="Left" Margin="66,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Height="27"/>
+        <Button x:Name="button" Content="Save Changes F5" Margin="134,412,0,0" VerticalAlignment="Top" Width="210"  Height="28" Cursor="Hand" TabIndex="8" HorizontalAlignment="Left"/>
+        <Label x:Name="label_Copy7" Content="Comment" HorizontalAlignment="Left" Margin="53,336,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Height="27"/>
+        <TextBox x:Name="textBox_Copy6" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" Margin="134,337,0,0" FontSize="14" FontWeight="Bold" TabIndex="7" HorizontalAlignment="Left"/>
+
+    </Grid>
+</Window>

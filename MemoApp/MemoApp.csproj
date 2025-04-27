@@ -1,0 +1,102 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="4.jpg" />
+    <None Remove="about.png" />
+    <None Remove="add_memo.png" />
+    <None Remove="calander.png" />
+    <None Remove="Data\Pics\Bg\3.jpg" />
+    <None Remove="Data\Pics\Bg\4.jpg" />
+    <None Remove="Data\Pics\Bg\5.jpg" />
+    <None Remove="Data\Pics\Bg\6.jpg" />
+    <None Remove="Data\Pics\Main\Menu\about.png" />
+    <None Remove="Data\Pics\Main\Menu\add_memo.png" />
+    <None Remove="Data\Pics\Main\Menu\Close_butt.png" />
+    <None Remove="Data\Pics\Main\Menu\Minimize_butt.png" />
+    <None Remove="Data\Pics\Main\Menu\search_memo.png" />
+    <None Remove="Data\Pics\Main\Menu\settings-alt-32.png" />
+    <None Remove="Data\Pics\Main\Menu\tools.png" />
+    <None Remove="search_memo.png" />
+    <None Remove="settings-alt-32.png" />
+    <None Remove="tools.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Pics\Bg\0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Bg\1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Bg\2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Bg\3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Bg\4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Bg\5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Bg\6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\about.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\add_memo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\Close_butt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\Minimize_butt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\search_memo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\settings-alt-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\tools.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="4.jpg" />
+    <Resource Include="about.png" />
+    <Resource Include="add_memo.png" />
+    <Resource Include="calander.png" />
+    <Resource Include="search_memo.png" />
+    <Resource Include="settings-alt-32.png" />
+    <Resource Include="tools.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

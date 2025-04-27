@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Data\Pics\Icons\notebook_valentine_icon.ico</ApplicationIcon>
+    <Version>2025.04.17</Version>
+    <Authors>Jobin Jose Samuel</Authors>
+    <Company>Synmata</Company>
+    <Product>Notepad App</Product>
+    <Copyright>®2014-2015 All</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Pics\help_icon.png" />
+    <None Remove="Data\Pics\Icons\notebook_icon.png" />
+    <None Remove="Data\Pics\Icons\notebook_valentine_icon.ico" />
+    <None Remove="Data\Pics\menu\about.png" />
+    <None Remove="Data\Pics\menu\edit_alt_icon.png" />
+    <None Remove="Data\Pics\menu\File.png" />
+    <None Remove="Data\Pics\menu\view_list_icon.png" />
+    <None Remove="Data\Pics\notepad_icon.png" />
+    <None Remove="help_icon.png" />
+    <None Remove="notebook_icon.png" />
+    <None Remove="notepad_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Pics\help_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Icons\notebook_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Icons\notebook_valentine_icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\menu\about.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\menu\edit_alt_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\menu\File.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\menu\view_list_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\notepad_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="help_icon.png" />
+    <Resource Include="notebook_icon.png" />
+    <Resource Include="notepad_icon.png" />
+  </ItemGroup>
+
+</Project>

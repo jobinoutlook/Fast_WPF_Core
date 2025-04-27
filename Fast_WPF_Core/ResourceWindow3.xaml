@@ -1,0 +1,24 @@
+﻿<Window x:Class="Fast_WPF_Core.ResourceWindow3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fast_WPF_Core"
+        mc:Ignorable="d"
+        Title="ResourceWindow3" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Button x:Name="button1" Content="Save As" HorizontalAlignment="Left" Margin="358,172,0,0" VerticalAlignment="Top"
+                    FontSize="{DynamicResource App_ButtonFontSize}" Width="{DynamicResource App_ButtonWidth}" Height="{DynamicResource App_ButtonHeight}" Background="#FFDBF2B6" FontWeight="{DynamicResource App_ButtonFontWeight}" Cursor="{DynamicResource App_ButtonCursor}"
+                    />
+            <Button x:Name="button2" Content="Exit" HorizontalAlignment="Left" Margin="358,244,0,0" VerticalAlignment="Top"
+                    FontSize="{DynamicResource App_ButtonFontSize}" Width="{DynamicResource App_ButtonWidth}" Height="{DynamicResource App_ButtonHeight}" Background="{DynamicResource App_ButtonBackground}" FontWeight="{DynamicResource App_ButtonFontWeight}"  Cursor="{DynamicResource App_ButtonCursor}"
+                    />
+            <Button x:Name="button" Content="Add New" HorizontalAlignment="Left" Margin="358,104,0,0" VerticalAlignment="Top"
+                    FontSize="{DynamicResource App_ButtonFontSize}" Width="{DynamicResource App_ButtonWidth}" Height="{DynamicResource App_ButtonHeight}" Background="{DynamicResource App_ButtonBackground}" FontWeight="{DynamicResource App_ButtonFontWeight}"  Cursor="{DynamicResource App_ButtonCursor}"
+                    />
+
+        </Grid>
+
+    </Grid>
+</Window>

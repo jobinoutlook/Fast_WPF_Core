@@ -1,0 +1,33 @@
+﻿<Window x:Class="PhoneBook.Grouping"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneBook"
+        mc:Ignorable="d"
+        Title="Grouping" Height="627" Width="751">
+    <Grid Margin="52,19,265,132">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="22" FontSize="14" FontWeight="Bold" TabIndex="0" Margin="133,55,0,0"/>
+        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Margin="49,50,0,0"/>
+        <Label x:Name="label_Copy" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463" Margin="47,90,0,0"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="133,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="22" FontSize="14" FontWeight="Bold" TabIndex="1"/>
+        <Label x:Name="label_Copy1" Content="Last Name" HorizontalAlignment="Left" Margin="49,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="132,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" FontSize="14" FontWeight="Bold" TabIndex="2"/>
+        <Label x:Name="label_Copy2" Content="Cell Number" HorizontalAlignment="Left" Margin="45,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463"/>
+        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="22" Margin="134,220,0,0" FontSize="14" FontWeight="Bold" TabIndex="4"/>
+        <TextBox x:Name="textBox_Copy3" HorizontalAlignment="Left" Margin="131,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" Height="22"  FontSize="14" FontWeight="Bold" TabIndex="5"/>
+        <Label x:Name="label_Copy4" Content="Email" HorizontalAlignment="Left" Margin="52,300,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463"/>
+        <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" Margin="132,300,0,0" FontSize="14" FontWeight="Bold" TabIndex="6"/>
+        <Label x:Name="label_Copy5" Content="Comment" HorizontalAlignment="Left" Margin="53,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463"/>
+        <TextBox x:Name="textBox_Copy5" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" Margin="133,371,0,0" FontSize="14" FontWeight="Bold" TabIndex="7"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="132,179,0,0" VerticalAlignment="Top" Width="208" SelectedIndex="0" Cursor="Hand" FontWeight="Bold" FontSize="14" TabIndex="3">
+            <ComboBoxItem Cursor="Hand" Content="Male"/>
+            <ComboBoxItem Cursor="Hand" Content="Female"/>
+        </ComboBox>
+        <Label x:Name="label_Copy6" Content="Gender" HorizontalAlignment="Left" Margin="49,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463"/>
+        <Button x:Name="button" Content="Save Changes F5" HorizontalAlignment="Left" Margin="134,412,0,0" VerticalAlignment="Top" Width="208" Height="28" Cursor="Hand" TabIndex="8"/>
+        <Label x:Name="label_Copy7" Content="Address" HorizontalAlignment="Left" Margin="51,334,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.166,-1.463"/>
+        <TextBox x:Name="textBox_Copy6" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="22" Margin="131,337,0,0" FontSize="14" FontWeight="Bold" TabIndex="7"/>
+        <Label x:Name="label1" Content="Land Line" HorizontalAlignment="Left" Margin="49,262,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.47,-0.166" Width="65"/>
+    </Grid>
+</Window>
