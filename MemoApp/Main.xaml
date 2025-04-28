@@ -39,7 +39,7 @@
                     <SolidColorBrush Color="#FFC4C4C4" Opacity="0.35"/>
                 </Canvas.Background>
                 <!--<Button x:Name="btnClose" Content="Close" Canvas.Left="780" Canvas.Top="38" Height="30" Width="88" RenderTransformOrigin="0.333,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Click="btnClose_Click"  />-->
-                <Button x:Name="btnAddMemmo"  Canvas.Left="9" Canvas.Top="5" Height="65" Width="129" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource Image_Button}">
+                <Button x:Name="btnAddMemmo"  Canvas.Left="9" Canvas.Top="5" Height="65" Width="129" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource Image_Button}" >
                     <StackPanel>
                         <Image Source="/add_memo.png" Style="{DynamicResource Image_Button_Image}"/>
                         <Label Content="Add Memo F2" Style="{DynamicResource Label_Style}"/>
@@ -59,7 +59,7 @@
                         <Label Content="Settings F4" Style="{DynamicResource Label_Style}"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnToolsMenu"  Canvas.Left="416" Canvas.Top="6" Height="64" Width="129" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource Image_Button}" >
+                <Button x:Name="btnToolsMenu"  Canvas.Left="416" Canvas.Top="6" Height="64" Width="129" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource Image_Button}" Click="btnToolsMenu_Click" >
                     <StackPanel>
                         <Image Source="/tools.png" Style="{DynamicResource Image_Button_Image}"/>
                         <Label Content="Users F5" Style="{DynamicResource Label_Style}"/>

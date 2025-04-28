@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemoApp.Users"
         mc:Ignorable="d"
-        Title="Users" Height="454" Width="343" Icon="/Data/Pics/Main/Menu/tools.png" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid>
+        x:Name="UsersWindow"
+        Title="Users" Height="415" Width="340" Icon="/Data/Pics/Main/Menu/tools.png" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid >
+        <GroupBox x:Name="groupBox" Header="Users Info" Margin="20,10,18,0" Height="295" VerticalAlignment="Top">
+            <Canvas>
+                <Border BorderBrush="Black" BorderThickness="1" Height="70" Width="100" Canvas.Left="104" Canvas.Top="10" CornerRadius="5,5,5,5">
+                    <Image >
+                        <Image.OpacityMask>
+                            <ImageBrush/>
+                        </Image.OpacityMask>
+                    </Image>
+                </Border>
+                <Button x:Name="btnBrowse"  Canvas.Left="105" Canvas.Top="88" Height="35" VerticalAlignment="Top" Style="{DynamicResource Image_Button}" Click="btnBrowse_Click" HorizontalAlignment="Center" Width="99">
+                    <StackPanel Orientation="Horizontal" Width="89">
+                        <Image Source="/Data/Pics/Main/Menu/search_memo.png" Style="{DynamicResource Image_Button_Image}" Width="20" Height="29" RenderTransformOrigin="-0.425,0.623"/>
+                        <Label Content="Browse" Style="{DynamicResource Label_Style}" Width="64"/>
+                    </StackPanel>
+                </Button>
+                <Label x:Name="label" FontWeight="Bold" Content="Name" Canvas.Top="129" HorizontalContentAlignment="Right" Height="24" VerticalAlignment="Center" Width="74" HorizontalAlignment="Left" Canvas.Left="10"/>
+                <ComboBox x:Name="cbxUsers" Canvas.Left="97" Canvas.Top="130" Width="120"  Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="comboBox_SelectionChanged">
+                    <ComboBoxItem Content="1st User"/>
+                    <ComboBoxItem Content="2nd User"/>
+                    <ComboBoxItem Content="3rd User"/>
+                </ComboBox>
+                <Label x:Name="lblPassword" FontWeight="Bold" Content="Password" Canvas.Top="199" Height="24" Width="74" HorizontalContentAlignment="Right" VerticalAlignment="Center" Canvas.Left="13" HorizontalAlignment="Left"/>
+                <PasswordBox x:Name="txtPasswordBox" Canvas.Left="97" Canvas.Top="202" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
+                <Label x:Name="lblRepeatPassword" FontWeight="Bold" Content="Repeat" Canvas.Top="239" Height="24" Width="57" HorizontalContentAlignment="Right" VerticalAlignment="Center" Canvas.Left="27" HorizontalAlignment="Left"/>
+                <PasswordBox x:Name="txtConfirmPasswordBox" Canvas.Left="97" Canvas.Top="242" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label x:Name="label_Copy" FontWeight="Bold" Content="User Name" Canvas.Top="160" HorizontalContentAlignment="Right" Height="24" Width="74" Canvas.Left="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtUserName" Canvas.Left="97" Canvas.Top="167" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            </Canvas>
+        </GroupBox>
+        <Button x:Name="btnSaveUser"  Canvas.Left="9" Canvas.Top="5" Height="36" VerticalAlignment="Top" Style="{DynamicResource Image_Button}" Click="btnSaveUser_Click"  Margin="128,321,100,0">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Data/Pics/Main/Menu/save.png" Style="{DynamicResource Image_Button_Image}" Width="26" Height="24" />
+                <Label Content="Save F5" Style="{DynamicResource Label_Style}" Width="72"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>

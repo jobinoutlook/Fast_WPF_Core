@@ -139,5 +139,11 @@ namespace MemoApp
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void btnToolsMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MemoApp.Users.MyUsers myuser = new Users.MyUsers();
+            myuser.ShowDialog();
+        }
     }
 }

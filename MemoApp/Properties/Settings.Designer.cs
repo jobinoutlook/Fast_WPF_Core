@@ -34,5 +34,77 @@ namespace MemoApp.Properties {
                 this["selected_image_index"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string first_user_name {
+            get {
+                return ((string)(this["first_user_name"]));
+            }
+            set {
+                this["first_user_name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("111")]
+        public string first_user_pass {
+            get {
+                return ((string)(this["first_user_pass"]));
+            }
+            set {
+                this["first_user_pass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Test 1")]
+        public string second_user_name {
+            get {
+                return ((string)(this["second_user_name"]));
+            }
+            set {
+                this["second_user_name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("111")]
+        public string second_user_pass {
+            get {
+                return ((string)(this["second_user_pass"]));
+            }
+            set {
+                this["second_user_pass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Test 2")]
+        public string third_user_name {
+            get {
+                return ((string)(this["third_user_name"]));
+            }
+            set {
+                this["third_user_name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("111")]
+        public string third_user_pass {
+            get {
+                return ((string)(this["third_user_pass"]));
+            }
+            set {
+                this["third_user_pass"] = value;
+            }
+        }
     }
 }

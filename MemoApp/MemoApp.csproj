@@ -21,12 +21,19 @@
     <None Remove="Data\Pics\Main\Menu\add_memo.png" />
     <None Remove="Data\Pics\Main\Menu\Close_butt.png" />
     <None Remove="Data\Pics\Main\Menu\Minimize_butt.png" />
+    <None Remove="Data\Pics\Main\Menu\save.png" />
     <None Remove="Data\Pics\Main\Menu\search_memo.png" />
     <None Remove="Data\Pics\Main\Menu\settings-alt-32.png" />
     <None Remove="Data\Pics\Main\Menu\tools.png" />
     <None Remove="search_memo.png" />
     <None Remove="settings-alt-32.png" />
     <None Remove="tools.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Pics\Main\Menu\save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
