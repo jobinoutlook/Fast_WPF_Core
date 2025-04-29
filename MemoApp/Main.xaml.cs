@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MemoApp.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -82,6 +83,15 @@ namespace MemoApp
             timer.Tick += Timer_Tick;
             timer.Start();
             UpdateCalender();
+            //--------------------
+            MemoApp.Users.LoginWindow loginWindow = new Users.LoginWindow();
+            loginWindow.ShowDialog();
+
+            if (loginWindow.DialogResult==false)
+            {
+                this.Close();
+            }
+
         }
 
         void UpdateCalender()
@@ -144,6 +154,12 @@ namespace MemoApp
         {
             MemoApp.Users.MyUsers myuser = new Users.MyUsers();
             myuser.ShowDialog();
+        }
+
+        private void btnAboutSubMenu_Click(object sender, RoutedEventArgs e)
+        {
+            AboutUs aboutUs = new AboutUs();
+            aboutUs.ShowDialog();
         }
     }
 }

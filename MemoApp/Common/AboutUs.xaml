@@ -1,0 +1,22 @@
+﻿<Window x:Class="MemoApp.Common.AboutUs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoApp.Common"
+        mc:Ignorable="d"
+        Title="AboutUs" Height="285" Width="410" FontSize="16" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False" Loaded="Window_Loaded">
+    <Grid>
+        <Label x:Name="lblCompanyName" Content="Company Name" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Width="338"/>
+        <Label Content="Product Name" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="Product Version" HorizontalAlignment="Left" Margin="20,86,0,0" VerticalAlignment="Top"/>
+        <Label Content="Web Site" HorizontalAlignment="Left" Margin="20,122,0,0" VerticalAlignment="Top"/>
+        <Border BorderBrush="Black" BorderThickness="0,1,0,0" Margin="0,169,0,64"/>
+        <Label Content="All Rights Reserved&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" Height="34"/>
+        <Label x:Name="lblAllRights" Content="---" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,179,0,0" VerticalAlignment="Top" Width="330" Foreground="#FF950808"/>
+        <Label x:Name="lblProductName" Content="---" HorizontalAlignment="Left" Margin="199,50,0,0" VerticalAlignment="Top" Width="169" Foreground="#FFD11B1B"/>
+        <Label x:Name="lblVersion" Content="---" HorizontalAlignment="Left" Margin="199,86,0,0" VerticalAlignment="Top" Width="169" Foreground="#FFD11B1B"/>
+        <Label x:Name="lblWebsite" Content="---" HorizontalAlignment="Left" Margin="199,122,0,0" VerticalAlignment="Top" Width="169" Foreground="#FFD11B1B"/>
+
+    </Grid>
+</Window>

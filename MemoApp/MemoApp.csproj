@@ -6,6 +6,13 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <Version>2023.07.23-r1</Version>
+    <Company>Great Company</Company>
+    <Product>My Memo Application</Product>
+    <FileVersion>2025.7.13</FileVersion>
+    <AssemblyVersion>2025.7.13</AssemblyVersion>
+    <Copyright>2005 - 2025</Copyright>
+    <Description>www.memmoapp.com</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,17 +27,28 @@
     <None Remove="Data\Pics\Main\Menu\about.png" />
     <None Remove="Data\Pics\Main\Menu\add_memo.png" />
     <None Remove="Data\Pics\Main\Menu\Close_butt.png" />
+    <None Remove="Data\Pics\Main\Menu\exit.png" />
     <None Remove="Data\Pics\Main\Menu\Minimize_butt.png" />
+    <None Remove="Data\Pics\Main\Menu\ok.png" />
     <None Remove="Data\Pics\Main\Menu\save.png" />
     <None Remove="Data\Pics\Main\Menu\search_memo.png" />
     <None Remove="Data\Pics\Main\Menu\settings-alt-32.png" />
     <None Remove="Data\Pics\Main\Menu\tools.png" />
+    <None Remove="Data\Pics\user\0.jpg" />
+    <None Remove="Data\Pics\user\1.jpg" />
+    <None Remove="Data\Pics\user\2.jpg" />
     <None Remove="search_memo.png" />
     <None Remove="settings-alt-32.png" />
     <None Remove="tools.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\Pics\Main\Menu\exit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\Main\Menu\ok.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\Pics\Main\Menu\save.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -79,6 +97,15 @@
     <Content Include="Data\Pics\Main\Menu\tools.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\Pics\user\0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\user\1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Pics\user\2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -104,10 +131,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\Pics\user\" />
   </ItemGroup>
 
 </Project>
