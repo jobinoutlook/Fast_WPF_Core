@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,17 @@ namespace MemoApp.Users
 
         private void btnBrowse_Click(object sender, RoutedEventArgs e)
         {
-
+            Microsoft.Win32.OpenFileDialog op = new Microsoft.Win32.OpenFileDialog();
+            op.Filter = "Jpg files|*.jpg";
+            op.ShowDialog();
+            //---------------
+            if (op.FileName == "")
+            {
+                return;
+            }
+            //------load and show image-------
+            user_image_loader(op.FileName);
+            //---------------------------------
         }
 
         private void btnSaveUser_Click(object sender, RoutedEventArgs e)
@@ -78,9 +89,27 @@ namespace MemoApp.Users
                 MemoApp.Properties.Settings.Default.third_user_pass = txtPasswordBox.Password;
             }
 
+            MemoApp.Properties.Settings.Default.Save();
 
-            MessageBox.Show("Saved");
+            if (imgUser.Source == null)
+            {
+                
+                MessageBox.Show("Saved");
+                return;
+            }
 
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            BitmapSource bmp= (BitmapSource)imgUser.Source;
+
+            encoder.Frames.Add(BitmapFrame.Create(bmp));
+
+            string fn = System.IO.Path.Combine(Environment.CurrentDirectory, "Data", "Pics", "user", cbxUsers.SelectedIndex.ToString() + ".jpg");
+            using (FileStream fs = new FileStream(fn, FileMode.Create))
+            {
+                encoder.Save(fs);
+            }
+
+            MessageBox.Show("Saved by Image");
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -103,6 +132,41 @@ namespace MemoApp.Users
                 txtUserName.Text = MemoApp.Properties.Settings.Default.third_user_name;
                 txtPasswordBox.Password = MemoApp.Properties.Settings.Default.third_user_pass;
             }
+
+            string fn = System.IO.Path.Combine(Environment.CurrentDirectory, "Data", "Pics", "user", cbxUsers.SelectedIndex.ToString() + ".jpg");
+
+            user_image_loader(fn);
+        }
+
+        void user_image_loader(string fn)
+        {
+            if (System.IO.File.Exists(fn) == true)
+            {
+                BitmapImage bm = new BitmapImage();
+                FileStream fs = new FileStream(fn, FileMode.Open);
+                //--------------
+                bm.BeginInit();
+                bm.CacheOption = BitmapCacheOption.OnLoad;
+                bm.StreamSource = fs;
+                bm.EndInit();
+                //--------------
+                this.imgUser.Source = bm;
+                //----------------------------------
+                bm = null;
+                fs.Dispose();
+                //----------------------------------
+            }
+            else
+            {
+                this.imgUser.Source = null;
+            }
+            
+            
+        }
+
+        private void UsersWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.cbxUsers.SelectedIndex = 0;
         }
     }
 }

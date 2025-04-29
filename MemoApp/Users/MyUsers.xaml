@@ -6,15 +6,15 @@
         xmlns:local="clr-namespace:MemoApp.Users"
         mc:Ignorable="d"
         x:Name="UsersWindow"
-        Title="Users" Height="415" Width="340" Icon="/Data/Pics/Main/Menu/tools.png" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Users" Height="415" Width="340" Icon="/Data/Pics/Main/Menu/tools.png" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="UsersWindow_Loaded">
     <Grid >
         <GroupBox x:Name="groupBox" Header="Users Info" Margin="20,10,18,0" Height="295" VerticalAlignment="Top">
             <Canvas>
                 <Border BorderBrush="Black" BorderThickness="1" Height="70" Width="100" Canvas.Left="104" Canvas.Top="10" CornerRadius="5,5,5,5">
-                    <Image >
-                        <Image.OpacityMask>
+                    <Image x:Name="imgUser" >
+                        <!--<Image.OpacityMask>
                             <ImageBrush/>
-                        </Image.OpacityMask>
+                        </Image.OpacityMask>-->
                     </Image>
                 </Border>
                 <Button x:Name="btnBrowse"  Canvas.Left="105" Canvas.Top="88" Height="35" VerticalAlignment="Top" Style="{DynamicResource Image_Button}" Click="btnBrowse_Click" HorizontalAlignment="Center" Width="99">
