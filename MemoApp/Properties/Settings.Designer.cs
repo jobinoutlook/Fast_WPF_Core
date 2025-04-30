@@ -106,5 +106,17 @@ namespace MemoApp.Properties {
                 this["third_user_pass"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int last_id {
+            get {
+                return ((int)(this["last_id"]));
+            }
+            set {
+                this["last_id"] = value;
+            }
+        }
     }
 }

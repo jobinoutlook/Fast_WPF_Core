@@ -161,5 +161,11 @@ namespace MemoApp
             AboutUs aboutUs = new AboutUs();
             aboutUs.ShowDialog();
         }
+
+        private void btnAddMemmo_Click(object sender, RoutedEventArgs e)
+        {
+            MemoWindow memoWindow = new MemoWindow();   
+            memoWindow.ShowDialog();
+        }
     }
 }
