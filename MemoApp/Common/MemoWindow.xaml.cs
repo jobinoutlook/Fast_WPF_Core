@@ -220,5 +220,11 @@ namespace MemoApp.Common
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void richTextBoxMemo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextRange trRichtxtbox = new TextRange(this.richTextBoxMemo.Document.ContentStart, this.richTextBoxMemo.Document.ContentEnd);
+            lblCharCount.Content = trRichtxtbox.Text.ReplaceLineEndings("").Length.ToString();
+        }
     }
 }

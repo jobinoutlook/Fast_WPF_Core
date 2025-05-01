@@ -24,10 +24,14 @@
             </Button>
             <Separator/>
         </ToolBar>
-        <StatusBar DockPanel.Dock="Bottom" Height="35" />
+        <StatusBar DockPanel.Dock="Bottom" Height="35">
+            <Label Content="       "/>
+            <Label Content="Char Count"/>
+            <Label x:Name="lblCharCount" Content="0"/>
+        </StatusBar>
         <GroupBox x:Name="groupBox" Header="Memo Details" Width="548" Height="452">
             <Canvas Height="445" VerticalAlignment="Center">
-                <RichTextBox x:Name="richTextBoxMemo" Height="167" Width="517" HorizontalAlignment="Center" Canvas.Top="268" VerticalAlignment="Top" Canvas.Left="10">
+                <RichTextBox x:Name="richTextBoxMemo" Height="167" Width="517" HorizontalAlignment="Center" Canvas.Top="268" VerticalAlignment="Top" Canvas.Left="10" TextChanged="richTextBoxMemo_TextChanged">
                     <FlowDocument>
                         <Paragraph>
                             <Run Text="RichTextBox"/>
