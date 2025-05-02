@@ -1,0 +1,116 @@
+﻿<Window x:Class="MemoApp.Common.SearchMemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoApp.Common"
+        mc:Ignorable="d"
+        Title="Search Memo" Height="610" Width="835" ResizeMode="NoResize" Background="#FFDCDADA" Loaded="Window_Loaded">
+    <DockPanel LastChildFill="True">
+        <StatusBar DockPanel.Dock="Bottom" Height="40">
+            <Label x:Name="label" Content="Label"/>
+            <Label Content="       " Width="265"/>
+            <Label Content="Char Count"/>
+            <Label x:Name="lblCharCount" Content="0"/>
+        </StatusBar>
+        <Canvas Width="812">
+            <GroupBox x:Name="groupBox" Height="494" Header="Search" Width="245" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="20">
+                <Canvas>
+                    <ListBox x:Name="listBox" Height="200" Width="203" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Top="262" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="15"/>
+                    <Label x:Name="label1" Content="Title:" Canvas.Left="23" Canvas.Top="224" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtTitle" Canvas.Left="67" TextWrapping="Wrap" Text="" Canvas.Top="228" Width="76" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Button x:Name="btnFind" Content="Find" Cursor="Hand" Canvas.Left="152" Canvas.Top="226" Height="26" Width="61" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBox" Content="Find Similar Titles" Canvas.Left="67" Canvas.Top="187" RenderTransformOrigin="0.26,0.974" Width="149" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                </Canvas>
+            </GroupBox>
+            <GroupBox x:Name="groupBox1" Height="494" Header="Memo Details" Width="512" HorizontalAlignment="Center" Canvas.Left="280" VerticalAlignment="Top" Canvas.Top="20">
+                <Canvas>
+                    <Border BorderBrush="#FF969696" BorderThickness="1" Height="229" Width="470" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="17" Canvas.Left="16">
+                        <Canvas Margin="0,-1,0,45" RenderTransformOrigin="0.5,0.5">
+                            <Canvas.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleX="0.184"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform X="0.391"/>
+                                </TransformGroup>
+                            </Canvas.RenderTransform>
+                            <Label x:Name="label_Copy" Content="Memo ID" Canvas.Left="33" Canvas.Top="45" Width="90" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Label x:Name="label_Copy1" Content="Memo Title" Canvas.Left="33" Canvas.Top="91" Width="90" Height="27" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Label x:Name="label_Copy2" Content="Memo Date" Canvas.Left="33" Canvas.Top="136" Width="110" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <TextBox x:Name="txtMemoTitle" Text="Textbox Title" Canvas.Left="183" TextWrapping="Wrap" Canvas.Top="95" Width="266" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <TextBox x:Name="txtMemoID" Text="Textbox ID" Canvas.Left="183" TextWrapping="Wrap" Canvas.Top="50" Width="106" IsReadOnly="True" Background="#FFEFECEC" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <DatePicker x:Name="datePicker" Canvas.Left="183" Canvas.Top="140" Height="25" Width="266" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </Canvas>
+                    </Border>
+                    <ToolBar x:Name="grpToolBar" Height="41" Canvas.Left="16" Canvas.Top="250" Width="470" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button x:Name="btnLeftAlign" Cursor="Hand" Click="btnLeftAlign_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/text_align_left-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnCenterAlign" Cursor="Hand" Click="btnCenterAlign_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/text_align_center-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnRightAlign" Cursor="Hand" Click="btnRightAlign_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/text_align_right-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+
+                        <Separator/>
+
+                        <Button x:Name="btnIncreaseIndent" Cursor="Hand" Click="btnIncreaseIndent_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/indent-increase-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+
+                        <Button x:Name="btnDecreaseIndent" Cursor="Hand" Click="btnDecreaseIndent_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/indent-decrease-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Separator/>
+                        <Button x:Name="btnBold" Cursor="Hand" Click="btnBold_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/bold.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnItalic" Cursor="Hand" Click="btnItalic_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/Italic.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnUnderline" Cursor="Hand" Click="btnUnderline_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/underline.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Separator/>
+                        <Button x:Name="btnIncreaseFont" Cursor="Hand" Click="btnIncreaseFont_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/Increase-Font.png" Height="16" Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnDecreaseFont" Cursor="Hand" Click="btnDecreaseFont_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/Decrease-Font.png" Height="16" Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Separator/>
+                        <Button x:Name="btnCut" Cursor="Hand" Click="btnCut_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/cut.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnCopy" Cursor="Hand" Click="btnCopy_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/ic_content_copy_48px-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnPaste" Cursor="Hand" Click="btnPaste_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/content-paste-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Separator/>
+                        <Button x:Name="btUndo" Cursor="Hand" Click="btUndo_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/Undo-2-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                        <Button x:Name="btnRedo" Cursor="Hand" Click="btnRedo_Click">
+                            <Image Source="/Data/Pics/rtf_buttons/Redo-2-16.png"  Style="{DynamicResource rtf_Image_Button}"/>
+                        </Button>
+                    </ToolBar>
+                    <RichTextBox x:Name="richTextBoxMemo" Height="167" Width="470" Canvas.Top="295" Canvas.Left="16" TextChanged="richTextBoxMemo_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Canvas>
+            </GroupBox>
+        </Canvas>
+
+    </DockPanel>
+
+
+</Window>

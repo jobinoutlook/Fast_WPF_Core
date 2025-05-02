@@ -19,11 +19,11 @@
     <None Remove="4.jpg" />
     <None Remove="about.png" />
     <None Remove="add_memo.png" />
-    <None Remove="calander.png" />
     <None Remove="Data\Pics\Bg\3.jpg" />
     <None Remove="Data\Pics\Bg\4.jpg" />
     <None Remove="Data\Pics\Bg\5.jpg" />
     <None Remove="Data\Pics\Bg\6.jpg" />
+    <None Remove="Data\Pics\Main\calander.png" />
     <None Remove="Data\Pics\Main\Menu\about.png" />
     <None Remove="Data\Pics\Main\Menu\add_memo.png" />
     <None Remove="Data\Pics\Main\Menu\Close_butt.png" />
@@ -56,6 +56,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\Pics\Main\calander.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\Pics\Main\Menu\exit.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -170,7 +173,6 @@
     <Resource Include="4.jpg" />
     <Resource Include="about.png" />
     <Resource Include="add_memo.png" />
-    <Resource Include="calander.png" />
     <Resource Include="search_memo.png" />
     <Resource Include="settings-alt-32.png" />
     <Resource Include="tools.png" />

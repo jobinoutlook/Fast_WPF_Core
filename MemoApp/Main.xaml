@@ -24,7 +24,7 @@
                 </Border>
                 <Canvas Height="140" Width="160" Canvas.Left="10" Canvas.Top="260" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Canvas.Background>
-                        <ImageBrush ImageSource="/calander.png"/>
+                        <ImageBrush ImageSource="/Data/Pics/Main/calander.png"/>
                     </Canvas.Background>
                     <Label x:Name="lblYear" Content="2023" Canvas.Left="10" Canvas.Top="30" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     <Label x:Name="lblMonth" Content="June" Canvas.Left="70" Canvas.Top="30" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1.861,0.77" Width="80"/>
@@ -41,33 +41,33 @@
                 <!--<Button x:Name="btnClose" Content="Close" Canvas.Left="780" Canvas.Top="38" Height="30" Width="88" RenderTransformOrigin="0.333,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Click="btnClose_Click"  />-->
                 <Button x:Name="btnAddMemmo"  Canvas.Left="9" Canvas.Top="5" Height="65" Width="129" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource Image_Button}" Click="btnAddMemmo_Click" >
                     <StackPanel>
-                        <Image Source="/add_memo.png" Style="{DynamicResource Image_Button_Image}"/>
+                        <Image Source="/Data/Pics/Main/Menu/add_memo.png" Style="{DynamicResource Image_Button_Image}"/>
                         <Label Content="Add Memo F2" Style="{DynamicResource Label_Style}"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnSearchMenu"  Canvas.Left="145" Canvas.Top="5" Height="65" Width="129" Style="{DynamicResource Image_Button}" >
+                <Button x:Name="btnSearchMenu"  Canvas.Left="145" Canvas.Top="5" Height="65" Width="129" Style="{DynamicResource Image_Button}"  Click="btnSearchMenu_Click">
                     <StackPanel>
-                        <Image Source="/search_memo.png" Style="{DynamicResource Image_Button_Image}"/>
+                        <Image Source="/Data/Pics/Main/Menu/search_memo.png" Style="{DynamicResource Image_Button_Image}"/>
                         <Label Content="Search F3" Style="{DynamicResource Label_Style}"/>
                     </StackPanel>
                 </Button>
 
                 <Button x:Name="btnSettingsMenu"  Canvas.Left="280" Canvas.Top="5" Height="65" Width="129" Style="{DynamicResource Image_Button}" >
                     <StackPanel>
-                        <Image Source="/settings-alt-32.png" Style="{DynamicResource Image_Button_Image}"/>
+                        <Image Source="/Data/Pics/Main/Menu/settings-alt-32.png" Style="{DynamicResource Image_Button_Image}"/>
                         <Label Content="Settings F4" Style="{DynamicResource Label_Style}"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="btnToolsMenu"  Canvas.Left="416" Canvas.Top="6" Height="64" Width="129" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource Image_Button}" Click="btnToolsMenu_Click" >
                     <StackPanel>
-                        <Image Source="/tools.png" Style="{DynamicResource Image_Button_Image}"/>
+                        <Image Source="/Data/Pics/Main/Menu/tools.png" Style="{DynamicResource Image_Button_Image}"/>
                         <Label Content="Users F5" Style="{DynamicResource Label_Style}"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="btnAboutMenu"  Canvas.Left="551" Canvas.Top="6" Height="64" Width="129" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{DynamicResource Image_Button}" Click="btnAboutMenu_Click">
                     <StackPanel>
-                        <Image Source="/about.png" Style="{DynamicResource Image_Button_Image}"/>
+                        <Image Source="/Data/Pics/Main/Menu/about.png" Style="{DynamicResource Image_Button_Image}"/>
                         <Label Content="About F6" Style="{DynamicResource Label_Style}"/>
                     </StackPanel>
                 </Button>
@@ -94,13 +94,13 @@
                 <Canvas x:Name="canvasAbout" Height="79" Width="135" HorizontalAlignment="Center" Canvas.Left="560" VerticalAlignment="Top" Background="#FFEFEBEB" Canvas.Top="-4">
                     <Button x:Name="btnAboutSubMenu" Height="35" Width="135" Click="btnAboutSubMenu_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="3" FontSize="16">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/about.png" Height="30" Width="36"/>
+                            <Image Source="/Data/Pics/Main/Menu/about.png" Height="30" Width="36"/>
                             <Label Content="About Us"/>
                         </StackPanel>
                     </Button>
                     <Button x:Name="btnHelpSubMenu" Height="35" Width="135" Click="btnAboutMenu_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="41" FontSize="16" >
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/tools.png" Height="30" Width="36"/>
+                            <Image Source="/Data/Pics/Main/Menu/tools.png" Height="30" Width="36"/>
                             <Label Content="Help"/>
                         </StackPanel>
                     </Button>

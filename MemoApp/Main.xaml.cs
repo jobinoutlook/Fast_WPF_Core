@@ -167,5 +167,11 @@ namespace MemoApp
             MemoWindow memoWindow = new MemoWindow();   
             memoWindow.ShowDialog();
         }
+
+        private void btnSearchMenu_Click(object sender, RoutedEventArgs e)
+        {
+             SearchMemo memoWindow = new SearchMemo();
+            memoWindow.ShowDialog();
+        }
     }
 }
