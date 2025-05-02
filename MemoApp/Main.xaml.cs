@@ -87,11 +87,15 @@ namespace MemoApp
             MemoApp.Users.LoginWindow loginWindow = new Users.LoginWindow();
             loginWindow.ShowDialog();
 
-            if (loginWindow.DialogResult==false)
+            if (loginWindow.DialogResult == false)
             {
                 this.Close();
             }
-
+            else
+            {
+                this.imgUser.Source = loginWindow.imgUser.Source;
+                this.lblUsername.Content = loginWindow.cbxUserName.Text;
+            }
         }
 
         void UpdateCalender()
@@ -152,8 +156,7 @@ namespace MemoApp
 
         private void btnToolsMenu_Click(object sender, RoutedEventArgs e)
         {
-            MemoApp.Users.MyUsers myuser = new Users.MyUsers();
-            myuser.ShowDialog();
+           
         }
 
         private void btnAboutSubMenu_Click(object sender, RoutedEventArgs e)
@@ -173,5 +176,40 @@ namespace MemoApp
              SearchMemo memoWindow = new SearchMemo();
             memoWindow.ShowDialog();
         }
+        private void btnSettingsMenu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btnUsersMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MemoApp.Users.MyUsers myuser = new Users.MyUsers();
+            myuser.ShowDialog();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F2)
+            {
+                btnAddMemmo_Click(sender, e);
+            }
+            else if (e.Key == Key.F3)
+            {
+                btnSearchMenu_Click(sender, e);
+            }
+            else if (e.Key == Key.F4)
+            {
+                btnSettingsMenu_Click(sender, e);
+            }
+            else if (e.Key == Key.F5)
+            {
+                btnUsersMenu_Click(sender, e);
+            }
+            else if (e.Key == Key.F6)
+            {
+                btnAboutMenu_Click(sender, e);
+            }
+        }
+
+        
     }
 }
