@@ -112,6 +112,9 @@ namespace MemoApp.Common
 
         private void btnNewMemo_Click(object sender, RoutedEventArgs e)
         {
+            //Properties.Settings.Default.Reset();
+            //Properties.Settings.Default.Save();
+
             try
             {
                 this.groupBox.IsEnabled = true;

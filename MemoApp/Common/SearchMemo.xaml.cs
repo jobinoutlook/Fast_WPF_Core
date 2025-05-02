@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -110,7 +111,63 @@ namespace MemoApp.Common
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
+            int last_id = MemoApp.Properties.Settings.Default.last_id;
+
+            string title_fn;
+            string file_content;
+            
+            for (int id = 1; id < last_id + 1; id++)
+            {
+                ListBoxItem lbxItem = new ListBoxItem();
+                lbxItem.Tag = id;
+                title_fn = Environment.CurrentDirectory + "\\Data\\Docs\\" + id.ToString() + "_title" + ".dll";
+
+                if (System.IO.File.Exists(title_fn))
+                {
+                    file_content=System.IO.File.ReadAllText(title_fn,Encoding.UTF8);
+                    lbxItem.Content = file_content;
+                    this.lbxTitle.Items.Add(lbxItem);   
+                }
+                
+                
+            }
+        }
+
+       
+
+        private void lbxTitle_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = lbxTitle.SelectedIndex;
+
+            if (index == -1) return;
+
+            ListBoxItem li = new ListBoxItem();
+            li = (ListBoxItem)lbxTitle.Items[index];
+
+            int sel_id = (int)li.Tag;
+            string sel_title = (string)li.Content;
+
+            txtMemoID.Text = sel_id.ToString();
+            txtMemoTitle.Text = sel_title;
+
+            string date_fn = Environment.CurrentDirectory + "\\Data\\Docs\\" + sel_id.ToString() + "_date" + ".dll";
+            if (System.IO.File.Exists(date_fn))
+            {
+                datePicker.Text = System.IO.File.ReadAllText(date_fn, Encoding.UTF8);
+
+            }
+            //---------------------------
+            string rtf_fn = Environment.CurrentDirectory + "\\Data\\Docs\\" + sel_id.ToString() + "_r" + ".dll";
+            richTextBoxMemo.Document.Blocks.Clear();
+            if (System.IO.File.Exists(rtf_fn))
+            {
+                TextRange tr = new TextRange(this.richTextBoxMemo.Document.ContentStart, this.richTextBoxMemo.Document.ContentEnd);
+                System.IO.FileStream fs = new System.IO.FileStream(rtf_fn, System.IO.FileMode.OpenOrCreate);
+                //-----
+                tr.Load(fs, DataFormats.Rtf);
+                fs.Dispose();
+            }
+            //---------------------------------------------------------------------
         }
     }
 }
