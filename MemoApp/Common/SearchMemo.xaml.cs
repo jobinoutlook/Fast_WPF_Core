@@ -126,7 +126,7 @@ namespace MemoApp.Common
                 {
                     file_content=System.IO.File.ReadAllText(title_fn,Encoding.UTF8);
                     lbxItem.Content = file_content;
-                    this.lbxTitle.Items.Add(lbxItem);   
+                    this.lbxSearchTitle.Items.Add(lbxItem);   
                 }
                 
                 
@@ -137,12 +137,12 @@ namespace MemoApp.Common
 
         private void lbxTitle_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int index = lbxTitle.SelectedIndex;
+            int index = lbxSearchTitle.SelectedIndex;
 
             if (index == -1) return;
 
             ListBoxItem li = new ListBoxItem();
-            li = (ListBoxItem)lbxTitle.Items[index];
+            li = (ListBoxItem)lbxSearchTitle.Items[index];
 
             int sel_id = (int)li.Tag;
             string sel_title = (string)li.Content;
@@ -168,6 +168,30 @@ namespace MemoApp.Common
                 fs.Dispose();
             }
             //---------------------------------------------------------------------
+        }
+
+        private void btnFind_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (ListBoxItem item in lbxSearchTitle.Items)
+            {
+                item.Background = System.Windows.Media.Brushes.White;
+
+                if (chkTitle.IsChecked == true)
+                {
+                    if (item.Content.ToString().Contains(txtSearchTitle.Text))
+                    { 
+                        item.Background = System.Windows.Media.Brushes.Yellow;
+                    }
+                }
+                else
+                {
+                    if(item.Content.ToString() == txtSearchTitle.Text)
+                    {
+                        item.Background = System.Windows.Media.Brushes.Yellow;
+                    }
+
+                }
+            }
         }
     }
 }

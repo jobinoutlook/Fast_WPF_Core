@@ -16,11 +16,11 @@
         <Canvas Width="812">
             <GroupBox x:Name="groupBox" Height="494" Header="Search" Width="245" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="20">
                 <Canvas>
-                    <ListBox x:Name="lbxTitle" Height="200" Width="203" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Top="262" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="15" SelectionChanged="lbxTitle_SelectionChanged"/>
+                    <ListBox x:Name="lbxSearchTitle" Height="200" Width="203" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Top="262" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="15" SelectionChanged="lbxTitle_SelectionChanged"/>
                     <Label x:Name="label1" Content="Title:" Canvas.Left="23" Canvas.Top="224" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txtTitle" Canvas.Left="67" TextWrapping="Wrap" Text="" Canvas.Top="228" Width="76" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <Button x:Name="btnFind" Content="Find" Cursor="Hand" Canvas.Left="152" Canvas.Top="226" Height="26" Width="61" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBox" Content="Find Similar Titles" Canvas.Left="67" Canvas.Top="187" RenderTransformOrigin="0.26,0.974" Width="149" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtSearchTitle" Canvas.Left="67" TextWrapping="Wrap" Text="" Canvas.Top="228" Width="76" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Button x:Name="btnFind" Content="Find" Cursor="Hand" Canvas.Left="152" Canvas.Top="226" Height="26" Width="61" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnFind_Click"/>
+                    <CheckBox x:Name="chkTitle" Content="Find Similar Titles" Canvas.Left="67" Canvas.Top="187" RenderTransformOrigin="0.26,0.974" Width="149" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
                 </Canvas>
             </GroupBox>
