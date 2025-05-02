@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemoApp.Common"
         mc:Ignorable="d"
-        Title="Search Memo" Height="610" Width="835" ResizeMode="NoResize" Background="#FFDCDADA" Loaded="Window_Loaded">
+        Title="Search Memo" Height="640" Width="835" ResizeMode="NoResize" Background="#FFDCDADA" Loaded="Window_Loaded">
     <DockPanel LastChildFill="True">
         <StatusBar DockPanel.Dock="Bottom" Height="40">
             <Label x:Name="label" Content="Label"/>
@@ -108,6 +108,7 @@
                     </RichTextBox>
                 </Canvas>
             </GroupBox>
+            <Button x:Name="btnUpdate" Content="Update" Canvas.Left="664" Canvas.Top="526" RenderTransformOrigin="0.492,-0.248" HorizontalAlignment="Center" VerticalAlignment="Top" Width="99" Height="24" Click="btnUpdate_Click"/>
         </Canvas>
 
     </DockPanel>

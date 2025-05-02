@@ -110,7 +110,9 @@ namespace MemoApp.Common
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
+        { 
+            lbxSearchTitle.Items.Clear();
+            //-------------------
             int last_id = MemoApp.Properties.Settings.Default.last_id;
 
             string title_fn;
@@ -172,6 +174,11 @@ namespace MemoApp.Common
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
         {
+            txtMemoID.Text = "";
+            txtMemoTitle.Text = "";
+            datePicker.Text = "";
+            richTextBoxMemo.Document.Blocks.Clear();
+            //-----------------------------------
             foreach (ListBoxItem item in lbxSearchTitle.Items)
             {
                 item.Background = System.Windows.Media.Brushes.White;
@@ -191,6 +198,51 @@ namespace MemoApp.Common
                     }
 
                 }
+            }
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+             
+                //-----------save last id in settings----------
+                int last_id;
+               if(int.TryParse(txtMemoID.Text, out last_id))
+                {
+                    //----------------save title,date and rtf------------------------------
+                    string title_fn;
+                    string date_fn;
+                    string rtf_fn;
+                    if (!System.IO.Directory.Exists(Environment.CurrentDirectory + "\\Data\\Docs\\"))
+                    {
+                        System.IO.Directory.CreateDirectory(Environment.CurrentDirectory + "\\Data\\Docs\\");
+                    }
+                    title_fn = Environment.CurrentDirectory + "\\Data\\Docs\\" + last_id.ToString() + "_title" + ".dll";
+                    date_fn = Environment.CurrentDirectory + "\\Data\\Docs\\" + last_id.ToString() + "_date" + ".dll";
+                    rtf_fn = Environment.CurrentDirectory + "\\Data\\Docs\\" + last_id.ToString() + "_r" + ".dll";
+                    //--------------save data------
+                    System.IO.File.WriteAllText(title_fn, this.txtMemoTitle.Text, Encoding.UTF8);
+                    System.IO.File.WriteAllText(date_fn, this.datePicker.Text, Encoding.UTF8);
+                    //---------------------------------------------------------------------
+                    TextRange tr = new TextRange(this.richTextBoxMemo.Document.ContentStart, this.richTextBoxMemo.Document.ContentEnd);
+                    System.IO.FileStream fs = new System.IO.FileStream(rtf_fn, System.IO.FileMode.OpenOrCreate);
+                    //-----
+                    tr.Save(fs, DataFormats.Rtf);
+                    fs.Dispose();
+                    //----------------refresh title----------------
+                    Window_Loaded(sender,e);
+                    //---------------------------------------------
+                    MessageBox.Show("Saved!");
+                    
+                }
+                
+                
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }
