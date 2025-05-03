@@ -4,52 +4,8 @@
              xmlns:local="clr-namespace:MemoApp"
              StartupUri="Main.xaml" ShutdownMode="OnMainWindowClose">
     <Application.Resources>
-        
-        <Style x:Key="Image_Button" TargetType="Button">
-            <Setter Property="FontSize" Value="16" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Opacity" Value="0.7" />
-            <Setter Property="Cursor" Value="Hand" />
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="FontSize" Value="18"/>
-                    <Setter Property="Opacity" Value="1"/>
-                    <Setter Property="BorderThickness" Value="4,0,4,0"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        
-        <Style x:Key="Label_Style" TargetType="Label">
-            <Setter Property="Foreground" Value="Black" />
-            
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="Red"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
 
-        
-        <Style x:Key="Image_Button_Image" TargetType="Image">
-            <Setter Property="Width" Value="73"/>
-            <Setter Property="Height" Value="34"/>
-            
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Width" Value="80"/>
-                    <Setter Property="Height" Value="40"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-        <Style x:Key="rtf_Image_Button" TargetType="Image">
-            <Setter Property="Width" Value="20"/>
-            <Setter Property="Height" Value="20"/>
-            
-            
-        </Style>
-
-
+        <ResourceDictionary Source="ResourceDictionary.xaml"/>
 
     </Application.Resources>
 </Application>
