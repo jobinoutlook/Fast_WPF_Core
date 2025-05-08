@@ -1,0 +1,82 @@
+﻿<Window x:Class="Advanced_WPF.ListView.ListViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Advanced_WPF.ListView"
+        mc:Ignorable="d"
+        Title="ListView Window" Height="705" Width="800">
+    <Grid Margin="-1,2,1,-2" >
+
+        <ListView x:Name="my_listView"  Margin="45,79,470,0" SelectionChanged="listView_SelectionChanged" Height="200" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="150"/>
+
+                </GridView>
+            </ListView.View>
+            <ListViewItem Content="Windows"/>
+            <ListViewItem Content="Programs"/>
+            <ListViewItem Content="Users"/>
+            <ListViewItem Content="Games"/>
+        </ListView>
+
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="165,39,0,0" VerticalAlignment="Top" Width="65" Height="24" Click="btnAdd_Click"/>
+        <TextBox x:Name="txtAdd" HorizontalAlignment="Left" Margin="45,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.5,-0.944" Height="24" TextChanged="textBox_TextChanged"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="255,39,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="btnClear_Click"/>
+        <Label x:Name="label" Content="Count" HorizontalAlignment="Left" Margin="45,284,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label x:Name="lblCount" Content="Label" HorizontalAlignment="Left" Margin="107,284,0,0" VerticalAlignment="Top" Height="27" Width="53"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="245,288,0,0" VerticalAlignment="Top" Height="23" Width="85" Click="btnDelete_Click"/>
+
+        <ListView x:Name="img_listView" Margin="390,78,114,0" SelectionChanged="img_listView_SelectionChanged" Height="201" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="info" Width="190"/>
+                    <!--<GridViewColumn Header="metainfo" Width="190"/>-->
+                </GridView>
+            </ListView.View>
+            <!--<ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Data/Pics/1.png" Width="32" Height="32"/>
+                    <Label Content="About"/>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Data/Pics/2.png" Width="32" Height="32"/>
+                    <Label Content="About"/>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Data/Pics/3.png" Width="32" Height="32"/>
+                    <Label Content="About"/>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Data/Pics/4.png" Width="32" Height="32"/>
+                    <Label Content="About"/>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Data/Pics/5.png" Width="32" Height="32"/>
+                    <Label Content="About"/>
+                </StackPanel>
+            </ListViewItem>-->
+        </ListView>
+        <Button x:Name="btnInfoClear" Content="Clear" HorizontalAlignment="Left" Margin="390,286,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="btnInfoClear_Click" RenderTransformOrigin="0.613,-0.332" />
+        <Button x:Name="btnAddImgColumn" Content="Add Image Column" HorizontalAlignment="Left" Margin="390,38,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.252,1.004" Width="161" Height="30" Click="btnAddImgColumn_Click"/>
+        <ListView x:Name="listView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="31,392,24,35">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnA_M_C_Items" Content="Add Multi Columns by Items" HorizontalAlignment="Left" Margin="31,357,0,0" VerticalAlignment="Top" Width="345" Height="30"/>
+        <Button x:Name="btnA_M_C_List" Content="Add Multi Columns by Items" HorizontalAlignment="Left" Margin="431,357,0,0" VerticalAlignment="Top" Width="345" Height="30"/>
+
+    </Grid>
+</Window>

@@ -81,5 +81,10 @@ namespace Fast_WPF_Core
                 Application.Current.Resources["My_ButtonFontSize"] = d;
             }
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

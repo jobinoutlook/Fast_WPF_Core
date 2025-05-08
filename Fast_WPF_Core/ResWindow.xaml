@@ -16,7 +16,7 @@
         <Label x:Name="lblWinRes" Content="Label" HorizontalAlignment="Center" Margin="0,188,0,0" VerticalAlignment="Top" Width="148" Background="#FFF2CBCB"/>
         <Button x:Name="btnLoadApp" Content="Load App resource" HorizontalAlignment="Left" Margin="135,244,0,0" VerticalAlignment="Top" Width="135" Height="33" Click="btnLoadApp_Click"/>
         <Label x:Name="lblAppRes" Content="Label" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Width="148" Background="#FFF2CBCB"/>
-        <Button FontSize="{DynamicResource My_ButtonFontSize}" x:Name="button" Content="Load" HorizontalAlignment="Left" Margin="285,39,0,0" VerticalAlignment="Top" Height="40" Width="{DynamicResource LoadButtonWidth}"/>
+        <Button FontSize="{DynamicResource My_ButtonFontSize}" x:Name="button" Content="Load" HorizontalAlignment="Left" Margin="285,39,0,0" VerticalAlignment="Top" Height="40" Width="{DynamicResource LoadButtonWidth}" Click="button_Click"/>
         <Button x:Name="btnSaveWinRes" Content="Save window Resource" HorizontalAlignment="Left" Margin="135,334,0,0" VerticalAlignment="Top" Width="135" Height="30" Click="btnSaveWinRes_Click"/>
         <TextBox x:Name="txtWindowRes" HorizontalAlignment="Center" Margin="0,334,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Height="30"/>
         <Button x:Name="btnSaveAppRes" Content="Save App Resource" HorizontalAlignment="Left" Margin="135,384,0,0" VerticalAlignment="Top" Width="135" Height="30" Click="btnSaveAppRes_Click"/>
