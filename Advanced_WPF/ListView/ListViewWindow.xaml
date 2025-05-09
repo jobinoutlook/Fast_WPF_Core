@@ -28,7 +28,7 @@
         <Label x:Name="lblCount" Content="Label" HorizontalAlignment="Left" Margin="107,284,0,0" VerticalAlignment="Top" Height="27" Width="53"/>
         <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="245,288,0,0" VerticalAlignment="Top" Height="23" Width="85" Click="btnDelete_Click"/>
 
-        <ListView x:Name="img_listView" Margin="390,78,114,0" SelectionChanged="img_listView_SelectionChanged" Height="201" VerticalAlignment="Top">
+        <ListView x:Name="img_listView" Margin="390,78,114,0"  Height="201" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="info" Width="190"/>
@@ -68,15 +68,29 @@
         </ListView>
         <Button x:Name="btnInfoClear" Content="Clear" HorizontalAlignment="Left" Margin="390,286,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="btnInfoClear_Click" RenderTransformOrigin="0.613,-0.332" />
         <Button x:Name="btnAddImgColumn" Content="Add Image Column" HorizontalAlignment="Left" Margin="390,38,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.252,1.004" Width="161" Height="30" Click="btnAddImgColumn_Click"/>
-        <ListView x:Name="listView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="31,392,24,35">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button x:Name="btnA_M_C_Items" Content="Add Multi Columns by Items" HorizontalAlignment="Left" Margin="31,357,0,0" VerticalAlignment="Top" Width="345" Height="30"/>
-        <Button x:Name="btnA_M_C_List" Content="Add Multi Columns by Items" HorizontalAlignment="Left" Margin="431,357,0,0" VerticalAlignment="Top" Width="345" Height="30"/>
+        <Canvas Margin="45,407,83,37" Background="#FFE3E3E3">
+            <ListView x:Name="multi_cols_listView"   Height="222" Canvas.Top="10" Width="650" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Canvas.Left="10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Photo" Width="100"  >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Height="64"  Source="{Binding User_photo}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Id" Width="60" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="First Name" Width="160" DisplayMemberBinding="{Binding First_name}"/>
+                        <GridViewColumn Header="Last Name" Width="200" DisplayMemberBinding="{Binding Last_name}"/>
+                        <GridViewColumn Header="Reg Date" Width="120" DisplayMemberBinding="{Binding Reg_date, StringFormat=\{0:d\}}"  />
+                    </GridView>
+                </ListView.View>
+                <ListViewItem Content="34"/>
 
+            </ListView>
+
+            <Button x:Name="btnA_M_C_Items" Content="Add Multi Columns by Items" HorizontalAlignment="Left" VerticalAlignment="Top" Width="345" Height="30" Canvas.Left="1" Canvas.Top="-45" Click="add_items_button_Click"/>
+        </Canvas>
+        <Button x:Name="button" Content="Add multi column by List" HorizontalAlignment="Left" Margin="400,362,0,0" VerticalAlignment="Top" Width="317" Height="30" Click="add_list_button_Click"/>
     </Grid>
 </Window>

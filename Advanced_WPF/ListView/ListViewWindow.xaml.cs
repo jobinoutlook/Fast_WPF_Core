@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Advanced_WPF.MyClass;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -101,10 +104,70 @@ namespace Advanced_WPF.ListView
             img_listView.Items.Add(li);
         }
 
-        private void img_listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+
+
+
+
+        private void add_items_button_Click(object sender, RoutedEventArgs e)
         {
-            int si =  img_listView.SelectedIndex;
+            this.multi_cols_listView.Items.Clear();
+            add_user_record("1D", "Sara", "Parker", new DateTime(2023, 7, 31), "face1.jpg");
+            add_user_record("2D", "Mike", "Peterson", new DateTime(2023, 6, 12), "face2.jpg");
+            add_user_record("3D", "Lee", "Madson", new DateTime(2023, 1, 12), "face3.jpg");
+        }
+
+        Advanced_WPF.MyClass.User_Adder add_user_record(string my_id, string my_fname, string my_lname,
+                             DateTime my_reg_date, String my_user_photo_name)
+        {
+            Advanced_WPF.MyClass.User_Adder user_info_adder;
+            //-------------------
+            //-------
+            String fn;
+            fn = Environment.CurrentDirectory + "\\Data\\Pics\\user\\" + my_user_photo_name;
+            //---------
+            user_info_adder = new MyClass.User_Adder(my_id, my_fname, my_lname,
+                                                     my_reg_date,
+                                                     new BitmapImage(new Uri(fn)));
+            //----------------
+            this.multi_cols_listView.Items.Add(user_info_adder);
+            return user_info_adder;
+        }
+
+
+
+        private void add_list_button_Click(object sender, RoutedEventArgs e)
+        {
+            multi_cols_listView.Items.Clear();
+
+            //----------------------------
+            List<User_Adder> my_list = new List<User_Adder>();
+
+            //------------------------------
+            //-------
+            String fn;
+            fn = Environment.CurrentDirectory + "\\Data\\Pics\\user\\";
+            //------------------------------
+            my_list.Add(new Advanced_WPF.MyClass.User_Adder("1D", "Sara", "Manson", new DateTime(2023, 4, 13),
+                        new BitmapImage(new Uri(fn + "face1.jpg"))));
+            //------------------------------
+            my_list.Add(new Advanced_WPF.MyClass.User_Adder("2D", "Mike", "Parker", new DateTime(2021, 7, 23),
+                        new BitmapImage(new Uri(fn + "face2.jpg"))));
+            //------------------------------
+            my_list.Add(new Advanced_WPF.MyClass.User_Adder("3D", "Peter", "Lee", new DateTime(2020, 2, 11),
+                        new BitmapImage(new Uri(fn + "face3.jpg"))));
+            //--------------------
+            this.multi_cols_listView.ItemsSource = my_list;
+
+            foreach (User_Adder item in my_list)
+            {
+                this.multi_cols_listView.Items.Add(item);
+            }
 
         }
+
+
+
+
     }
 }
