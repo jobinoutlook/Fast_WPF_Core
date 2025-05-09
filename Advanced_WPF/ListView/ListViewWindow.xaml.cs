@@ -157,7 +157,7 @@ namespace Advanced_WPF.ListView
             my_list.Add(new Advanced_WPF.MyClass.User_Adder("3D", "Peter", "Lee", new DateTime(2020, 2, 11),
                         new BitmapImage(new Uri(fn + "face3.jpg"))));
             //--------------------
-            this.multi_cols_listView.ItemsSource = my_list;
+           // this.multi_cols_listView.ItemsSource = my_list;
 
             foreach (User_Adder item in my_list)
             {
