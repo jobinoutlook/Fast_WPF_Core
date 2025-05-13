@@ -1,0 +1,73 @@
+﻿<Window x:Class="Advanced_WPF.EF.WorkersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Advanced_WPF.EF"
+        mc:Ignorable="d"
+        Title="Workers Window" Height="623" Width="699" Initialized="Window_Initialized">
+    <Grid>
+        <Border BorderBrush="#FFD9D6D6" BorderThickness="1" HorizontalAlignment="Center" Width="699" Height="74" VerticalAlignment="Top">
+            <Canvas>
+                <Button x:Name="btnAddNew" Canvas.Left="21" HorizontalAlignment="Left" Height="52" VerticalAlignment="Center" Canvas.Top="10" Width="90" Cursor="Hand">
+                    <StackPanel Orientation="Vertical" Height="54">
+                        <Image Width="24" Height="24" Source="/Data/Pics/Icons/add_sign_icon.png"/>
+                        <Label Content="Add New" Height="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnEdit" Canvas.Left="119" HorizontalAlignment="Center" Height="52" VerticalAlignment="Top" Width="90"  Canvas.Top="10" Cursor="Hand">
+                    <StackPanel Orientation="Vertical" Height="54">
+                        <Image Width="24" Height="24" Source="/Data/Pics/Icons/edit_pencile_icon.png"/>
+                        <Label Content="Edit" Height="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnDelete" Canvas.Left="215" Height="52" Width="90" Click="btnDelete_Click" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Hand">
+                    <StackPanel Orientation="Vertical" Height="54">
+                        <Image Width="24" Height="24" Source="/Data/Pics/Icons/delete_remove_icon.png"/>
+                        <Label Content="Delete" Height="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnSave" Canvas.Left="311" Height="52" Width="90"  Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Hand">
+                    <StackPanel Orientation="Vertical" Height="54">
+                        <Image Width="24" Height="24" Source="/Data/Pics/Icons/save_icon.png"/>
+                        <Label Content="Save" Height="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnCancel" Canvas.Left="406" Height="52" Width="90"  Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Hand">
+                    <StackPanel Orientation="Vertical" Height="54">
+                        <Image Width="24" Height="24" Source="/Data/Pics/Icons/cancel_no_icon.png"/>
+                        <Label Content="Cancel" Height="24"/>
+                    </StackPanel>
+                </Button>
+            </Canvas>
+        </Border>
+        <GroupBox x:Name="groupBox" Header="Employee" Margin="0,83,0,0" HorizontalAlignment="Center" Width="659" Height="291" VerticalAlignment="Top" FontSize="14">
+            <Canvas Height="266">
+                <Label Content="Id" Canvas.Left="163" Canvas.Top="12" HorizontalAlignment="Center" VerticalAlignment="Top" Width="28"/>
+                <TextBox x:Name="txt_Id" Canvas.Left="222" TextWrapping="Wrap" Text="" Canvas.Top="16" Width="82" HorizontalAlignment="Center" VerticalAlignment="Top" IsReadOnly="True" Background="#FFE6E5E5" />
+                <Label  Content="First Name" Canvas.Left="113" Canvas.Top="51" Width="78" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_Fname" Canvas.Left="222" TextWrapping="Wrap" Text="" Canvas.Top="55" Width="165"  Background="#FFFBFAFA" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.554" />
+                <Label Content="Last Name" Canvas.Left="114" Canvas.Top="96" Width="77" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_LastName" Canvas.Left="222" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="165" Background="#FFFBFAFA" RenderTransformOrigin="0.497,0.554" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                <Label Content="Mobile" Canvas.Left="136" Canvas.Top="140" Width="55" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+                <TextBox x:Name="txt_Mobile" Canvas.Left="222" TextWrapping="Wrap" Text="" Canvas.Top="144" Width="165"  Background="#FFFBFAFA" RenderTransformOrigin="0.491,0.602" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Content="Date of Birth" HorizontalContentAlignment="Right" Canvas.Left="98" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" Width="93"/>
+                <DatePicker x:Name="datePicker" Canvas.Left="222" Canvas.Top="181" HorizontalAlignment="Center" VerticalAlignment="Top" Width="165"/>
+                <Label Content="Income" Canvas.Left="119" Canvas.Top="222" HorizontalAlignment="Center" HorizontalContentAlignment="Right" VerticalAlignment="Top" Width="72"/>
+                <TextBox x:Name="txt_Income" Canvas.Left="222" TextWrapping="Wrap" Text="" Canvas.Top="226" Width="165" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </Canvas>
+        </GroupBox>
+        <DataGrid x:Name="workers_dataGrid"  SelectionChanged="dataGrid_SelectionChanged" Margin="0,379,0,0" Height="190" VerticalAlignment="Top" HorizontalAlignment="Center" Width="659" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="60" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="First Name" Width="120"  Binding="{Binding Fname}"/>
+                <DataGridTextColumn Header="Last Name" Width="160"  Binding="{Binding Lname}"/>
+                <DataGridTextColumn Header="Mobile" Width="100"  Binding="{Binding Mobile}"/>
+                <DataGridTextColumn Header="Date of Birth" Width="120"  Binding="{Binding Dob}"/>
+                <DataGridTextColumn Header="Income" Width="100" Binding="{Binding Income}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

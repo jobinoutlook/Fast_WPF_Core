@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Main" Height="480" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ListView x:Name="main_listView" ItemsSource="{Binding MainModelList}"  Margin="10,10,10,10">
+        <ListView x:Name="main_listView" ItemsSource="{Binding MainModelList}"  Margin="10,10,10,232" SelectionChanged="main_listView_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Photo" Width="80">
@@ -26,11 +26,17 @@
                 </GridView>
             </ListView.View>
 
-            <ListView.DataContext>
-                <ViewModel:MainViewModel/>
-            </ListView.DataContext>
-
         </ListView>
+        <Canvas Margin="0,239,0,10">
+            <Border BorderBrush="Black" Background="Aqua" BorderThickness="1" Height="90" Canvas.Left="480" Canvas.Top="10" Width="110" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Image x:Name="photo_img" Source="{Binding SelectedItem.Photo, ElementName=main_listView}"/>
+            </Border>
+            <TextBox x:Name="FirstName" Canvas.Left="40" TextWrapping="Wrap" Canvas.Top="27" Width="280" HorizontalAlignment="Left" Height="28" VerticalAlignment="Center" TextChanged="textBox_TextChanged" Text="{Binding SelectedItem.FirstName, ElementName=main_listView}"/>
+            <TextBox x:Name="Gender" Canvas.Left="40" TextWrapping="Wrap"  Canvas.Top="72" Width="280" Height="28" TextChanged="textBox_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{Binding SelectedItem.Gender, ElementName=main_listView}"/>
+            <Label x:Name="label" Content="{Binding SelectedItem.Id, ElementName=main_listView}" Canvas.Left="355" Canvas.Top="29" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Height="26"/>
+
+        </Canvas>
+
 
     </Grid>
 </Window>

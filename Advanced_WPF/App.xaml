@@ -2,8 +2,11 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Advanced_WPF"
-             StartupUri="/Mvvm/View/Main.xaml">
+             StartupUri="/EF/WorkersWindow.xaml">
     <Application.Resources>
          
     </Application.Resources>
 </Application>
+
+<!--StartupUri="/MvvView/Main.xaml">-->
+<!--StartupUri="/ListView/ListViewWindow.xaml">-->

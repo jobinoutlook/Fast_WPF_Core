@@ -24,7 +24,17 @@ namespace Advanced_WPF.Mvvm.View
         {
             InitializeComponent();
 
-            //this.DataContext = new MainViewModel();
+            this.DataContext = new MainViewModel();
+        }
+
+        private void main_listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
