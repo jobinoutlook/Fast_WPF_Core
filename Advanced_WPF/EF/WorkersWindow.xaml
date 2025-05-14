@@ -9,13 +9,13 @@
     <Grid>
         <Border BorderBrush="#FFD9D6D6" BorderThickness="1" HorizontalAlignment="Center" Width="699" Height="74" VerticalAlignment="Top">
             <Canvas>
-                <Button x:Name="btnAddNew" Canvas.Left="21" HorizontalAlignment="Left" Height="52" VerticalAlignment="Center" Canvas.Top="10" Width="90" Cursor="Hand">
+                <Button x:Name="btnAddNew" Canvas.Left="21" HorizontalAlignment="Left" Height="52" VerticalAlignment="Center" Canvas.Top="10" Width="90" Cursor="Hand" Click="btnAddNew_Click">
                     <StackPanel Orientation="Vertical" Height="54">
                         <Image Width="24" Height="24" Source="/Data/Pics/Icons/add_sign_icon.png"/>
                         <Label Content="Add New" Height="24"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnEdit" Canvas.Left="119" HorizontalAlignment="Center" Height="52" VerticalAlignment="Top" Width="90"  Canvas.Top="10" Cursor="Hand">
+                <Button x:Name="btnEdit" Canvas.Left="119" HorizontalAlignment="Center" Height="52" VerticalAlignment="Top" Width="90"  Canvas.Top="10" Cursor="Hand" Click="btnEdit_Click">
                     <StackPanel Orientation="Vertical" Height="54">
                         <Image Width="24" Height="24" Source="/Data/Pics/Icons/edit_pencile_icon.png"/>
                         <Label Content="Edit" Height="24"/>
@@ -27,13 +27,13 @@
                         <Label Content="Delete" Height="24"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnSave" Canvas.Left="311" Height="52" Width="90"  Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Hand">
+                <Button x:Name="btnSave" Canvas.Left="311" Height="52" Width="90"  Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Hand" Click="btnSave_Click">
                     <StackPanel Orientation="Vertical" Height="54">
                         <Image Width="24" Height="24" Source="/Data/Pics/Icons/save_icon.png"/>
                         <Label Content="Save" Height="24"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnCancel" Canvas.Left="406" Height="52" Width="90"  Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Hand">
+                <Button x:Name="btnCancel" Canvas.Left="406" Height="52" Width="90"  Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Hand" Click="btnCancel_Click">
                     <StackPanel Orientation="Vertical" Height="54">
                         <Image Width="24" Height="24" Source="/Data/Pics/Icons/cancel_no_icon.png"/>
                         <Label Content="Cancel" Height="24"/>
@@ -57,13 +57,13 @@
                 <TextBox x:Name="txt_Income" Canvas.Left="222" TextWrapping="Wrap" Text="" Canvas.Top="226" Width="165" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             </Canvas>
         </GroupBox>
-        <DataGrid x:Name="workers_dataGrid"  SelectionChanged="dataGrid_SelectionChanged" Margin="0,379,0,0" Height="190" VerticalAlignment="Top" HorizontalAlignment="Center" Width="659" AutoGenerateColumns="False">
+        <DataGrid x:Name="workers_dataGrid"  SelectionChanged="workers_dataGrid_SelectionChanged" Margin="0,379,0,0" Height="190" VerticalAlignment="Top" HorizontalAlignment="Center" Width="659" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeRows="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="60" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="First Name" Width="120"  Binding="{Binding Fname}"/>
                 <DataGridTextColumn Header="Last Name" Width="160"  Binding="{Binding Lname}"/>
                 <DataGridTextColumn Header="Mobile" Width="100"  Binding="{Binding Mobile}"/>
-                <DataGridTextColumn Header="Date of Birth" Width="120"  Binding="{Binding Dob}"/>
+                <DataGridTextColumn Header="Date of Birth" Width="120"  Binding="{Binding Dob, StringFormat=\{0:d\}}"/>
                 <DataGridTextColumn Header="Income" Width="100" Binding="{Binding Income}"/>
 
             </DataGrid.Columns>
