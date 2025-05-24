@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoApp", "MemoApp\MemoApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced_WPF", "Advanced_WPF\Advanced_WPF.csproj", "{912F6C36-BA3D-49B9-A3B8-2CBA865E2F87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adv_WPF", "Adv_WPF\Adv_WPF.csproj", "{8C040A20-5C77-4B41-B76E-FB7DB488B958}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{912F6C36-BA3D-49B9-A3B8-2CBA865E2F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{912F6C36-BA3D-49B9-A3B8-2CBA865E2F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{912F6C36-BA3D-49B9-A3B8-2CBA865E2F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C040A20-5C77-4B41-B76E-FB7DB488B958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C040A20-5C77-4B41-B76E-FB7DB488B958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C040A20-5C77-4B41-B76E-FB7DB488B958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C040A20-5C77-4B41-B76E-FB7DB488B958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
