@@ -58,6 +58,9 @@
     <Compile Include="Styles\wpf_styles.xaml.cs">
       <DependentUpon>wpf_styles.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Triggers\wpf_data_triggers.xaml.cs">
+      <DependentUpon>wpf_data_triggers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Triggers\wpf_triggers.xaml.cs">
       <DependentUpon>wpf_triggers.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Styles\wpf_styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Triggers\wpf_data_triggers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
