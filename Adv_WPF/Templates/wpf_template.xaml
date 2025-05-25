@@ -1,0 +1,42 @@
+﻿<Window x:Class="Adv_WPF.Templates.wpf_template"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Adv_WPF.Templates"
+        mc:Ignorable="d"
+        Title="wpf_template" Height="465" Width="670">
+    <Window.Resources>
+
+        <Style x:Key="Grid_Style" TargetType="Button">
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontSize" Value="24"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="BorderThickness" Value="3"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Content" Value="I am Button"/>
+                    <Setter Property="Width" Value="180"/>
+                    <Setter Property="Height" Value="80"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <ControlTemplate x:Key="my_butt" TargetType="Button">
+            <Grid>
+                <Border Background="Azure" BorderThickness="1" BorderBrush="Silver" CornerRadius="10"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                
+            </Grid>
+            
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.Resources>
+
+        </Grid.Resources>
+        <Button x:Name="button" Content="Save Changes" HorizontalAlignment="Left" Margin="130,164,0,0" VerticalAlignment="Top" MinHeight="45" MinWidth="120" Template="{DynamicResource my_butt}" Style="{DynamicResource Grid_Style}"/>
+
+
+    </Grid>
+</Window>
