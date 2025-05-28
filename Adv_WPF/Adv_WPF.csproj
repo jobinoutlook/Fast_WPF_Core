@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="system.windows.controls.ribbon" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -46,6 +47,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -58,8 +61,17 @@
     <Compile Include="Styles\wpf_styles.xaml.cs">
       <DependentUpon>wpf_styles.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Templates\wpf_image_butt.xaml.cs">
+      <DependentUpon>wpf_image_butt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Templates\wpf_template.xaml.cs">
       <DependentUpon>wpf_template.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar_Ribbon\wpf_StatusBar.xaml.cs">
+      <DependentUpon>wpf_StatusBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar_Ribbon\wpf_tab_control.xaml.cs">
+      <DependentUpon>wpf_tab_control.xaml</DependentUpon>
     </Compile>
     <Compile Include="Triggers\wpf_data_triggers.xaml.cs">
       <DependentUpon>wpf_data_triggers.xaml</DependentUpon>
@@ -83,9 +95,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Templates\wpf_image_butt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Templates\wpf_template.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Toolbar_Ribbon\wpf_StatusBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Toolbar_Ribbon\wpf_tab_control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Triggers\wpf_data_triggers.xaml">
       <SubType>Designer</SubType>
@@ -126,6 +150,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\Icons\add_sign_icon.png" />
+    <Resource Include="Data\Icons\cancel_no_icon.png" />
+    <Resource Include="Data\Icons\delete_remove_icon.png" />
+    <Resource Include="Data\Icons\edit_pencile_icon.png" />
+    <Resource Include="Data\Icons\save_icon.png" />
+  </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Templates\Images\file_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Images\help_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Images\view_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
