@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fast_WPF_Core", "Fast_WPF_Core\Fast_WPF_Core.csproj", "{9F233C80-B748-48F4-9082-13CEDC13C777}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook", "PhoneBook\PhoneBook.csproj", "{9A978658-2CF6-407B-BFF3-BBB40C6B81D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageApp", "PhoneBook\ImageApp.csproj", "{9A978658-2CF6-407B-BFF3-BBB40C6B81D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNotepad", "MyNotepad\MyNotepad.csproj", "{F47A03D6-3E2D-415C-9144-17DBFB9DCD5B}"
 EndProject
