@@ -7,20 +7,20 @@
         mc:Ignorable="d"
         Title="wpf_tab_control" Height="450" Width="800">
     <Grid>
-    <TabControl x:Name="tabControl">
-      <TabItem>
-        <TabItem.Header>
-          <StackPanel Orientation="Horizontal">
-            <Image Source="/Data/Icons/edit_pencile_icon.png" Width="16" Height="16"/>
-            <Label Content="Settings"/>
-          </StackPanel>
-        </TabItem.Header>
-        <Grid Background="#FFE5E5E5"/>
-      </TabItem>
-      <TabItem Header="TabItem">
-        <Grid Background="#FFE5E5E5"/>
-      </TabItem>
-    </TabControl>
+        <TabControl x:Name="tabControl">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Data/Icons/edit_pencile_icon.png" Width="16" Height="16"/>
+                        <Label Content="Settings"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
 
-  </Grid>
+    </Grid>
 </Window>

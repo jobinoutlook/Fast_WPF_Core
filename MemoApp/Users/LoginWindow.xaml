@@ -23,7 +23,7 @@
                     <ComboBoxItem Content="3rd User"/>-->
                 </ComboBox>
                 <Label x:Name="lblPassword" FontSize="14" Content="Password" Canvas.Top="163" Height="34" Width="80" HorizontalContentAlignment="Right" VerticalAlignment="Center" Canvas.Left="7" HorizontalAlignment="Left"/>
-                <PasswordBox x:Name="txtPasswordBox" Canvas.Left="98" Canvas.Top="168" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <PasswordBox x:Name="txtPasswordBox" Password="111" Canvas.Left="98" Canvas.Top="168" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Label x:Name="label_Copy" FontSize="14" Content="User Name" Canvas.Top="130" HorizontalContentAlignment="Right" Height="27" Width="80" Canvas.Left="7" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             </Canvas>

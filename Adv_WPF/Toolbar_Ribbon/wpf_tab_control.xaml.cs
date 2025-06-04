@@ -22,6 +22,8 @@ namespace Adv_WPF.Toolbar_Ribbon
         public wpf_tab_control()
         {
             InitializeComponent();
+
+           
         }
 
        
